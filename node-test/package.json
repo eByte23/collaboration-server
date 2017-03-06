@@ -1,18 +1,20 @@
 {
-    "version": "0.0.1",
+  "version": "0.0.1",
   "name": "chat-server",
   "description": "A very simple Node server written in TypeScript to receive and push chat room messages via WebSockets",
   "repository": "https://github.com/jamesseanwright/chat-server",
   "dependencies": {
-    "ws": "^0.7.2"
+    "express": "4.15.1",
+    "socket.io": "1.7.3"
   },
   "main": "./out/src/server",
   "scripts": {
     "compile": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "typescript": "^2.2.0",
+    "@types/express": "4.0.35",
     "@types/node": "^7.0.5",
-    "@types/ws": "0.0.38"
+    "@types/socket.io": "1.4.28",
+    "typescript": "^2.2.0"
   }
 }
