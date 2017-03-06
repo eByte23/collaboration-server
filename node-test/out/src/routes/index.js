@@ -1,15 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
-//import testContoller from '../controllers/testController';
-let router = express.Router();
-// middleware specific to this router
-router.use(function timeLog(req, res, next) {
-    console.log('Time: ', Date.now());
-    next();
+const express_1 = require("express");
+const userController_1 = require("../controllers/userController");
+let router = express_1.Router();
+router.get("/ping", (req, res) => {
+    res.send("pong");
 });
-router.all("/new-user", (req, res) => {
-    res.send("stuff");
-});
+router.use("/user", userController_1.default);
 exports.default = router;
 //# sourceMappingURL=index.js.map

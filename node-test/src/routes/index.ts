@@ -1,15 +1,13 @@
-import * as express from 'express';
-//import testContoller from '../controllers/testController';
-let router = express.Router()
+import { Request, Response, Router } from 'express';
+import userController from '../controllers/userController';
 
-// middleware specific to this router
-router.use(function timeLog (req, res, next) {
-  console.log('Time: ', Date.now())
-  next()
+let router = Router();
+
+router.get("/ping", (req: Request, res: Response) => {
+    res.send("pong");
 })
 
-router.all("/new-user", (req,res)=>{
-    res.send("stuff")
-});
+router.use("/user", userController);
+
 
 export default router;
