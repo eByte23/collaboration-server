@@ -1,10 +1,10 @@
 import * as argv from 'minimist';
 
-class Bootstrap implements IBootstrap {
+const Bootstrap : IBootstrap = {
 
     getArgs(): AppArgs {
         let port: number = process.env.PORT || 3000;
-        let host: string = process.env.host || "127.0.0.1"; //"192.168.160.143";
+        let host: string = process.env.host || "127.0.0.1";
 
         let args = argv<AppArgs>(process.argv.splice(2), {
             default: {
@@ -29,4 +29,4 @@ export interface AppArgs extends argv.ParsedArgs {
     port: number;
 }
 
-export default new Bootstrap();
+export default Bootstrap;
