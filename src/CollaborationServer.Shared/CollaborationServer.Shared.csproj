@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <AssemblyName>CollaborationServer.Shared</AssemblyName>
+    <PackageId>CollaborationServer.Shared</PackageId>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
+
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Server" Version="0.2.0-preview2-22683" />
+    <!-- <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="1.1.0-preview1-23661" />-->
+  </ItemGroup>
+
+</Project>
